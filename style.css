@@ -2,66 +2,40 @@
     visibility: hidden;
 }
 
-.emojiContainer {
-    display: flex;
-    flex-direction: row;
-}
-
-#randomDogContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40%;
-    height: 40vh;
-}
-
-.buttonsContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-h1 {
-    text-align: center;
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    height: 100%;
 }
 
 body {
-    height: 80%;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
 }
 
-p {
-    text-align: center;
+.buttonsContainer {
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
 
-#randomDogContainer svg {
-    position: ;
+button {
+    display: block;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
 }
 
-.buttonsContainer > button {
-
-}
-
-html {
-    height: 100%;
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-}
-
-#randomDog {
-    display: flex;
-    justify-content: center;
-    height: 40vh;
-}
-
-#randomDog > img {
-    max-height: 40vh;
-    max-width: 35vw;
-    object-fit: cover;
-    overflow: hidden;
+#randomDogContainer {
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-items: center;
+    width: calc(80 * 1vw);
+    height: calc(60 * 1vw);
+    max-width: 800px;
+    max-height: 600px;
+    border-radius: 20%;
 }
